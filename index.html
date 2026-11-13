@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="es-HN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance Sarai | Moda Femenina Importada desde EE.UU. en Honduras</title>
+  <meta name="description" content="Tienda en línea de camisetas femeninas importadas de Estados Unidos a Honduras. Calidad garantizada, entrega segura y atención personalizada." />
+  
+  <!-- Tipografía Editorial & Moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Iconos vectoriales ligeros -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ==========================================================================
+       1. VARIABLES & SISTEMA DE DISEÑO (PALETA SOBRIA MODA FEMENINA)
+       ========================================================================== */
+    :root {
+      --bg-primary: #FAF8F6;
+      --bg-secondary: #F3EFEA;
+      --surface: #FFFFFF;
+      --text-primary: #1F1D1B;
+      --text-secondary: #68615B;
+      --text-muted: #968E87;
+      
+      --brand-primary: #2C2523;     /* Espresso / Carbón cálido */
+      --brand-accent: #B47B6A;      /* Terracota / Rose Gold sobrio */
+      --brand-accent-hover: #9C6453;
+      --brand-soft: #F6ECE9;
+      
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1EBE5D;
+      
+      --border-light: #E8E2DC;
+      --shadow-sm: 0 2px 8px rgba(44, 37, 35, 0.04);
+      --shadow-md: 0 10px 25px -5px rgba(44, 37, 35, 0.07), 0 8px 10px -6px rgba(44, 37, 35, 0.03);
+      --shadow-lg: 0 20px 40px -10px rgba(44, 37, 35, 0.14);
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+      
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition: all 0.28s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* ==========================================================================
+       2. RESET Y ESTILOS BASE
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .section-padding {
+      padding: 5rem 0;
+    }
+
+    .serif-title {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    /* ==========================================================================
+       3. BARRA SUPERIOR & NAVEGACIÓN
+       ========================================================================== */
+    .top-announcement {
+      background-color: var(--brand-primary);
+      color: #F7F3F0;
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    header.navbar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(250, 248, 246, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .brand-monogram {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      color: #fff;
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .brand-tag {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--brand-accent);
+      display: block;
+      margin-top: -4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      position: relative;
+      padding: 0.25rem 0;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--brand-primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand-accent);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .cart-trigger {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      color: var(--brand-primary);
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.88rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .cart-trigger:hover {
+      border-color: var(--brand-accent);
+      transform: translateY(-1px);
+    }
+
+    .cart-badge {
+      background: var(--brand-accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      min-width: 21px;
+      height: 21px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      transition: transform 0.2s ease;
+    }
+
+    .cart-badge.bump {
+      transform: scale(1.3);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--brand-primary);
+      cursor: pointer;
+      padding: 0.4rem;
+    }
+
+    /* ==========================================================================
+       4. BOTONES Y MICROINTERACCIONES
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.85rem 1.65rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background: var(--brand-primary);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(44, 37, 35, 0.18);
+    }
+
+    .btn-primary:hover {
+      background: #3E3532;
+      transform: translateY(-2px);
+    }
+
+    .btn-accent {
+      background: var(--brand-accent);
+      color: #fff;
+    }
+
+    .btn-accent:hover {
+      background: var(--brand-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--brand-primary);
+      color: var(--brand-primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--brand-primary);
+      color: #fff;
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       5. SECCIÓN HOME (HERO + BENEFICIOS + DESTACADOS)
+       ========================================================================== */
+    .hero {
+      padding: 4rem 0 5rem;
+      background: radial-gradient(circle at top right, #F2E5DF 0%, var(--bg-primary) 55%);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--brand-soft);
+      color: var(--brand-accent-hover);
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(180, 123, 106, 0.2);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 4.5vw, 3.85rem);
+      color: var(--brand-primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 span {
+      color: var(--brand-accent);
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-trust-metrics {
+      display: flex;
+      gap: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .metric-item strong {
+      display: block;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .metric-item span {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-showcase-card {
+      background: var(--surface);
+      padding: 1.25rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-light);
+      position: relative;
+    }
+
+    .hero-showcase-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      background: var(--bg-secondary);
+    }
+
+    .hero-floating-tag {
+      position: absolute;
+      bottom: 2.2rem;
+      left: -1.5rem;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 0.95rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .hero-floating-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--brand-soft);
+      color: var(--brand-accent);
+      display: grid;
+      place-items: center;
+    }
+
+    /* Beneficios */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .benefit-card {
+      background: var(--surface);
+      padding: 1.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(180, 123, 106, 0.35);
+    }
+
+    .benefit-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--brand-soft);
+      color: var(--brand-accent);
+      display: grid;
+      place-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.45rem;
+      color: var(--brand-primary);
+    }
+
+    .benefit-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       6. CATÁLOGO / TIENDA (FILTROS + GRID TARJETAS PREMIUM)
+       ========================================================================== */
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--brand-accent);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      color: var(--brand-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+    }
+
+    /* Barra de herramientas del catálogo */
+    .catalog-controls {
+      background: var(--surface);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+      gap: 0.9rem;
+      align-items: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .control-group {
+      position: relative;
+    }
+
+    .control-group i {
+      position: absolute;
+      left: 0.95rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      width: 17px;
+      height: 17px;
+      pointer-events: none;
+    }
+
+    .catalog-input,
+    .catalog-select {
+      width: 100%;
+      padding: 0.72rem 0.95rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-size: 0.88rem;
+      transition: var(--transition);
+    }
+
+    .catalog-input.has-icon {
+      padding-left: 2.5rem;
+    }
+
+    .catalog-input:focus,
+    .catalog-select:focus {
+      outline: none;
+      border-color: var(--brand-accent);
+      background: var(--surface);
+    }
+
+    .catalog-status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    /* Grid de Productos */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(180, 123, 106, 0.4);
+    }
+
+    .product-media {
+      position: relative;
+      height: 330px;
+      background: #F4F0EC;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .product-card:hover .product-media img {
+      transform: scale(1.06);
+    }
+
+    .product-badges {
+      position: absolute;
+      top: 0.9rem;
+      left: 0.9rem;
+      right: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      pointer-events: none;
+    }
+
+    .badge {
+      padding: 0.32rem 0.72rem;
+      border-radius: var(--radius-full);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      backdrop-filter: blur(6px);
+    }
+
+    .badge-available {
+      background: rgba(235, 248, 240, 0.95);
+      color: #166534;
+      border: 1px solid #BBF7D0;
+    }
+
+    .badge-imported {
+      background: rgba(44, 37, 35, 0.88);
+      color: #fff;
+    }
+
+    .photo-caption-tag {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 0.9rem;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--text-primary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .quick-view-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(31, 29, 27, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .product-media:hover .quick-view-overlay {
+      opacity: 1;
+    }
+
+    .quick-view-pill {
+      background: var(--surface);
+      color: var(--brand-primary);
+      padding: 0.6rem 1.15rem;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: var(--shadow-md);
+      transform: translateY(8px);
+      transition: var(--transition);
+    }
+
+    .product-media:hover .quick-view-pill {
+      transform: translateY(0);
+    }
+
+    .product-body {
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.35rem;
+      font-size: 0.78rem;
+      color: var(--brand-accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .product-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      margin-bottom: 0.45rem;
+      cursor: pointer;
+    }
+
+    .product-title:hover {
+      color: var(--brand-accent);
+    }
+
+    .product-desc {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.1rem;
+      flex-grow: 1;
+    }
+
+    .product-specs-mini {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      padding: 0.55rem 0.75rem;
+      background: var(--bg-primary);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.15rem;
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .product-price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .product-price small {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .product-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.6rem;
+    }
+
+    .btn-add-cart {
+      padding: 0.72rem 1rem;
+      font-size: 0.86rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-icon-square {
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      background: var(--bg-primary);
+      color: var(--brand-primary);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-icon-square:hover {
+      background: var(--brand-soft);
+      border-color: var(--brand-accent);
+      color: var(--brand-accent);
+    }
+
+    /* ==========================================================================
+       7. QUIÉNES SOMOS & TESTIMONIOS
+       ========================================================================== */
+    .about-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 1.1rem;
+      margin-top: 1.5rem;
+    }
+
+    .step-item {
+      background: var(--surface);
+      padding: 1.15rem 1.35rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      margin-top: 2px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      padding: 1.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stars {
+      color: #D97706;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 1.1rem;
+    }
+
+    .testimonial-author {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .testimonial-loc {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       8. CONTÁCTANOS
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info-box {
+      background: var(--brand-primary);
+      color: #F8F5F2;
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-info-box h3 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .contact-list li {
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      font-size: 0.92rem;
+    }
+
+    .contact-form-card {
+      background: var(--surface);
+      padding: 2.25rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group {
+      margin-bottom: 1.15rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--brand-primary);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      background: var(--bg-primary);
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand-accent);
+      background: var(--surface);
+    }
+
+    /* ==========================================================================
+       9. MODAL DE PRODUCTO PREMIUM
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(24, 21, 19, 0.62);
+      backdrop-filter: blur(5px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-dialog {
+      background: var(--surface);
+      width: 100%;
+      max-width: 880px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      transform: translateY(22px) scale(0.97);
+      transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+      max-height: 92vh;
+      overflow-y: auto;
+    }
+
+    .modal-backdrop.open .modal-dialog {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border-light);
+      color: var(--brand-primary);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover {
+      background: var(--brand-primary);
+      color: #fff;
+      transform: rotate(90deg);
+    }
+
+    .modal-body-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+    }
+
+    .modal-image-col {
+      background: #F4F0EC;
+      position: relative;
+      min-height: 380px;
+    }
+
+    .modal-image-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-info-col {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .modal-specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.86rem;
+    }
+
+    .modal-specs-table td {
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .modal-specs-table td:first-child {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .modal-specs-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+      color: var(--brand-primary);
+    }
+
+    /* ==========================================================================
+       10. DRAWER DEL CARRITO DE COMPRAS (PERSISTENTE + WHATSAPP CHECKOUT)
+       ========================================================================== */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(24, 21, 19, 0.5);
+      backdrop-filter: blur(3px);
+      z-index: 210;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 440px;
+      height: 100vh;
+      background: var(--surface);
+      z-index: 220;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.14);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .cart-header {
+      padding: 1.35rem 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-items-container {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 0.95rem;
+      padding-bottom: 1.1rem;
+      margin-bottom: 1.1rem;
+      border-bottom: 1px solid var(--border-light);
+      align-items: center;
+    }
+
+    .cart-item img {
+      width: 72px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      background: var(--bg-secondary);
+      flex-shrink: 0;
+    }
+
+    .cart-item-details {
+      flex-grow: 1;
+    }
+
+    .cart-qty-controls {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-top: 0.45rem;
+    }
+
+    .qty-btn {
+      background: var(--bg-primary);
+      border: none;
+      width: 28px;
+      height: 26px;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .qty-btn:hover {
+      background: var(--brand-soft);
+    }
+
+    .qty-val {
+      padding: 0 0.65rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .cart-footer {
+      padding: 1.35rem 1.5rem;
+      border-top: 1px solid var(--border-light);
+      background: var(--bg-primary);
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+      color: var(--text-secondary);
+    }
+
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      padding-top: 0.65rem;
+      margin-top: 0.65rem;
+      border-top: 1px dashed var(--border-light);
+      margin-bottom: 1rem;
+    }
+
+    /* ==========================================================================
+       11. CHATBOT FLOTANTE INTELIGENTE (SAAS E-COMMERCE UI)
+       ========================================================================== */
+    .chatbot-launcher {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 180;
+      background: var(--brand-primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-full);
+      padding: 0.85rem 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      box-shadow: 0 12px 28px rgba(44, 37, 35, 0.28);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .chatbot-launcher:hover {
+      transform: translateY(-3px);
+      background: #3B322F;
+    }
+
+    .bot-online-dot {
+      width: 9px;
+      height: 9px;
+      background: #22C55E;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+    }
+
+    .chatbot-window {
+      position: fixed;
+      bottom: 5.4rem;
+      right: 1.5rem;
+      width: 370px;
+      max-width: calc(100vw - 2rem);
+      height: 510px;
+      max-height: 75vh;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-light);
+      z-index: 190;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(18px) scale(0.96);
+      transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .chatbot-window.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, var(--brand-primary), #433733);
+      color: #fff;
+      padding: 1rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--brand-accent);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .chat-messages {
+      flex-grow: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      background: var(--bg-primary);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .msg-bubble {
+      max-width: 84%;
+      padding: 0.72rem 0.95rem;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      line-height: 1.45;
+      animation: fadeUp 0.25s ease;
+    }
+
+    .msg-bot {
+      background: var(--surface);
+      color: var(--text-primary);
+      border: 1px solid var(--border-light);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .msg-user {
+      background: var(--brand-primary);
+      color: #fff;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chat-quick-chips {
+      padding: 0.6rem 0.85rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      gap: 0.45rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .chat-quick-chips::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chip-btn {
+      white-space: nowrap;
+      background: var(--brand-soft);
+      color: var(--brand-accent-hover);
+      border: 1px solid rgba(180, 123, 106, 0.25);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .chip-btn:hover {
+      background: var(--brand-accent);
+      color: #fff;
+    }
+
+    .chat-input-bar {
+      padding: 0.75rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .chat-input-bar input {
+      flex-grow: 1;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-full);
+      padding: 0.55rem 0.95rem;
+      font-size: 0.84rem;
+      background: var(--bg-primary);
+    }
+
+    .chat-input-bar input:focus {
+      outline: none;
+      border-color: var(--brand-accent);
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--brand-primary);
+      color: #fff;
+      padding: 0.75rem 1.35rem;
+      border-radius: var(--radius-full);
+      font-size: 0.86rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-lg);
+      z-index: 300;
+      opacity: 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    footer {
+      background: var(--brand-primary);
+      color: #D8D0C9;
+      padding: 3.5rem 0 2rem;
+      font-size: 0.88rem;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE DESIGN
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .modal-body-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .catalog-controls {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-floating-tag {
+        left: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: var(--shadow-md);
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .benefits-grid,
+      .catalog-controls {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra superior de propuesta de valor -->
+  <div class="top-announcement">
+    ✨ Importación directa desde Estados Unidos hacia toda Honduras • Envíos seguros y reserva inmediata por WhatsApp
+  </div>
+
+  <!-- Navegación Principal -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand-logo" aria-label="Inicio Elegance Sarai">
+        <div class="brand-monogram">ES</div>
+        <div>
+          <span class="brand-name">Elegance Sarai</span>
+          <span class="brand-tag">USA Fashion • Honduras</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#catalogo">Catálogo / Tienda</a></li>
+        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+        <li><a href="#contactanos">Contáctanos</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-trigger" id="openCartBtn" aria-label="Abrir carrito de compras">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span>Carrito</span>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+          <i data-lucide="menu" style="width:24px;height:24px;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         SECCIÓN 1: HOME (HERO + BENEFICIOS)
+         ===================================================================== -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-pill">
+              <i data-lucide="sparkles" style="width:15px;height:15px;"></i>
+              <span>Colección Importada USA • Entrega en Honduras</span>
+            </div>
+            <h1 class="serif-title">
+              Estilo auténtico y fresco con <span>Elegance Sarai</span>
+            </h1>
+            <p>
+              Seleccionamos camisetas femeninas originales importadas directamente desde Estados Unidos. Prendas versátiles, cómodas y listas para entrega o envío en Honduras con atención personalizada.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#catalogo" class="btn btn-primary">
+                <span>Ver catálogo</span>
+                <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+              </a>
+              <a href="https://wa.me/50498380998?text=Hola%20%F0%9F%98%8A%20Vengo%20de%20la%20web%20Elegance%20Sarai%20y%20quisiera%20consultar%20por%20las%20camisetas%20disponibles." target="_blank" rel="noopener" class="btn btn-outline">
+                <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+                <span>Asesoría directa</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-metrics">
+              <div class="metric-item">
+                <strong>100% USA</strong>
+                <span>Importación directa</span>
+              </div>
+              <div class="metric-item">
+                <strong>Fotos Reales</strong>
+                <span>De cada prenda en venta</span>
+              </div>
+              <div class="metric-item">
+                <strong>Envío HN</strong>
+                <span>Cobertura nacional</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-showcase-card">
+              <img 
+                src="https://lh3.googleusercontent.com/d/1aqYF2nai8cpcVN8zNAq0LXKiRbMj1AEh" 
+                alt="Camiseta femenina marca Polo importada - Elegance Sarai" 
+                class="hero-showcase-img"
+              />
+              <div class="hero-floating-tag">
+                <div class="hero-floating-icon">
+                  <i data-lucide="shield-check" style="width:22px;height:22px;"></i>
+                </div>
+                <div>
+                  <strong style="display:block;font-size:0.88rem;color:var(--brand-primary);">Fotografía Real Verificada</strong>
+                  <span style="font-size:0.78rem;color:var(--text-secondary);">Recibes exactamente la prenda que ves</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Por qué comprar con nosotros -->
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="plane"></i></div>
+            <h3>Importación Directa EE.UU.</h3>
+            <p>Traemos lotes seleccionados desde tiendas de Estados Unidos garantizando autenticidad y acabados superiores.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="camera"></i></div>
+            <h3>Transparencia Total</h3>
+            <p>Cada camiseta publicada cuenta con su fotografía real y precio claro en Lempiras, sin cargos ocultos.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="truck"></i></div>
+            <h3>Envíos Seguros en Honduras</h3>
+            <p>Coordinamos entregas locales rápidas y envíos confiables a nivel nacional mediante empresas de paquetería.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="check-circle-2"></i></div>
+            <h3>Reserva sin Complicaciones</h3>
+            <p>Arma tu carrito en segundos y confirma disponibilidad inmediata directamente por WhatsApp Business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECCIÓN 2: CATÁLOGO / TIENDA
+         ===================================================================== -->
+    <section id="catalogo" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Colección Disponible</span>
+          <h2 class="serif-title">Catálogo de Camisetas Femeninas</h2>
+          <p>Explora nuestras prendas importadas disponibles. Haz clic en cualquier camiseta para ver detalles ampliados o agrégala a tu carrito para cotizar por WhatsApp.</p>
+        </div>
+
+        <!-- Filtros y Buscador -->
+        <div class="catalog-controls" aria-label="Filtros de catálogo">
+          <div class="control-group">
+            <i data-lucide="search"></i>
+            <input type="text" id="searchInput" class="catalog-input has-icon" placeholder="Buscar por nombre, marca o código..." />
+          </div>
+
+          <div class="control-group">
+            <select id="brandFilter" class="catalog-select" aria-label="Filtrar por marca">
+              <option value="all">Marca: Todas</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <select id="yearFilter" class="catalog-select" aria-label="Filtrar por año">
+              <option value="all">Año: Todos (N/D)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <select id="priceFilter" class="catalog-select" aria-label="Filtrar por rango de precio">
+              <option value="all">Precio: Todos</option>
+              <option value="0-550">Hasta L 550.00</option>
+              <option value="551-650">L 551.00 - L 650.00</option>
+              <option value="651-9999">Más de L 650.00</option>
+            </select>
+          </div>
+
+          <button id="resetFiltersBtn" class="btn btn-outline" style="padding:0.68rem 1.1rem;border-radius:var(--radius-sm);font-size:0.84rem;">
+            Limpiar
+          </button>
+        </div>
+
+        <!-- Barra de estado y acceso directo a WhatsApp desde catálogo -->
+        <div class="catalog-status-bar">
+          <span id="resultsCounter">Mostrando 3 prendas disponibles</span>
+          <a href="https://wa.me/50498380998?text=Hola%20%F0%9F%98%8A%20Estoy%20viendo%20el%20cat%C3%A1logo%20de%20Elegance%20Sarai%20y%20me%20gustar%C3%ADa%20recibir%20atenci%C3%B3n%20personalizada." target="_blank" rel="noopener" style="color:var(--brand-accent-hover);font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;">
+            <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+            ¿Buscas algo específico? Consúltanos por WhatsApp
+          </a>
+        </div>
+
+        <!-- Grid dinámico de productos -->
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECCIÓN 3: QUIÉNES SOMOS
+         ===================================================================== -->
+    <section id="quienes-somos" class="section-padding about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="section-eyebrow">Nuestra Historia & Respaldo</span>
+            <h2 class="serif-title" style="font-size:clamp(2rem,3vw,2.6rem);margin-bottom:1rem;">
+              Moda estadounidense al alcance de la mujer hondureña
+            </h2>
+            <p style="color:var(--text-secondary);margin-bottom:1rem;">
+              <strong>Elegance Sarai</strong> nace con el propósito de ofrecer a las mujeres en Honduras acceso directo a prendas americanas originales, cuidadosamente seleccionadas por su calidad textil, corte favorecedor y durabilidad.
+            </p>
+            <p style="color:var(--text-secondary);">
+              Sabemos lo importante que es comprar con confianza; por ello, publicamos fotografías reales de cada camiseta en existencia y brindamos acompañamiento cercano desde tu consulta hasta la entrega.
+            </p>
+
+            <div class="process-steps">
+              <div class="step-item">
+                <div class="step-num">1</div>
+                <div>
+                  <strong style="display:block;font-size:0.95rem;">Curaduría en Estados Unidos</strong>
+                  <span style="font-size:0.85rem;color:var(--text-secondary);">Seleccionamos marcas reconocidas como Polo verificando etiquetas, costuras y estado impecable.</span>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">2</div>
+                <div>
+                  <strong style="display:block;font-size:0.95rem;">Importación y Control de Calidad</strong>
+                  <span style="font-size:0.85rem;color:var(--text-secondary);">Traslado seguro hasta Honduras y registro fotográfico individual de cada artículo.</span>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">3</div>
+                <div>
+                  <strong style="display:block;font-size:0.95rem;">Cotización y Entrega Transparente</strong>
+                  <span style="font-size:0.85rem;color:var(--text-secondary);">Confirmas tu pedido por WhatsApp, coordinamos método de pago y enviamos a tu ciudad.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="background:var(--surface);padding:2.25rem;border-radius:var(--radius-lg);border:1px solid var(--border-light);box-shadow:var(--shadow-md);">
+              <span class="section-eyebrow">Compromiso Elegance Sarai</span>
+              <h3 class="serif-title" style="font-size:1.85rem;margin-bottom:1rem;">Seguridad en cada compra</h3>
+              <ul style="list-style:none;display:grid;gap:1rem;color:var(--text-secondary);font-size:0.92rem;">
+                <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+                  <i data-lucide="check-circle" style="color:var(--brand-accent);flex-shrink:0;margin-top:3px;"></i>
+                  <span><strong>Sin sorpresas:</strong> La imagen mostrada en el catálogo corresponde fielmente a la camiseta a la venta.</span>
+                </li>
+                <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+                  <i data-lucide="check-circle" style="color:var(--brand-accent);flex-shrink:0;margin-top:3px;"></i>
+                  <span><strong>Precios claros en Lempiras:</strong> Todos nuestros precios están expresados en moneda nacional (L).</span>
+                </li>
+                <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+                  <i data-lucide="check-circle" style="color:var(--brand-accent);flex-shrink:0;margin-top:3px;"></i>
+                  <span><strong>Atención humana real:</strong> Resolvemos dudas de medidas, disponibilidad y envíos vía WhatsApp o llamada.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonios -->
+        <div class="section-header" style="margin-bottom:2rem;">
+          <span class="section-eyebrow">Clientas Satisfechas</span>
+          <h3 class="serif-title" style="font-size:2rem;">Experiencias de compra en Honduras</h3>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Me encantó la camiseta Polo que pedí. La tela es súper suave y llegó exactamente igual a la foto del catálogo. Muy amables al coordinar el envío."</p>
+            <div class="testimonial-author">Valeria Mendoza</div>
+            <div class="testimonial-loc">Tegucigalpa, F.M.</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Excelente atención por WhatsApp. Me confirmaron disponibilidad al instante y recibí mi paquete en San Pedro Sula sin ningún inconveniente."</p>
+            <div class="testimonial-author">Andrea Castillo</div>
+            <div class="testimonial-loc">San Pedro Sula, Cortés</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Se nota que son prendas originales importadas de Estados Unidos. Muy buena relación calidad-precio y proceso súper transparente."</p>
+            <div class="testimonial-author">Gabriela Reyes</div>
+            <div class="testimonial-loc">Comayagua</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECCIÓN 4: CONTÁCTANOS
+         ===================================================================== -->
+    <section id="contactanos" class="section-padding">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-box">
+            <span class="section-eyebrow" style="color:#E5B7A9;">Atención Personalizada</span>
+            <h3>Hablemos de tu próximo pedido</h3>
+            <p style="color:#D8D0C9;font-size:0.94rem;">
+              ¿Deseas confirmar medidas, coordinar una entrega local o consultar por nuevas importaciones desde Estados Unidos? Escríbenos directamente.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <i data-lucide="phone" style="color:#E5B7A9;flex-shrink:0;"></i>
+                <div>
+                  <strong>WhatsApp Business & Llamadas</strong><br/>
+                  <span>+504 9838-0998</span>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="map-pin" style="color:#E5B7A9;flex-shrink:0;"></i>
+                <div>
+                  <strong>Cobertura</strong><br/>
+                  <span>Honduras (Entregas locales y envíos nacionales)</span>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="clock" style="color:#E5B7A9;flex-shrink:0;"></i>
+                <div>
+                  <strong>Horario de Atención</strong><br/>
+                  <span>Lunes a Sábado: 8:30 AM – 6:30 PM</span>
+                </div>
+              </li>
+            </ul>
+
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+              <a href="https://wa.me/50498380998?text=Hola%20%F0%9F%98%8A%20Me%20comunico%20desde%20la%20secci%C3%B3n%20de%20contacto%20de%20Elegance%20Sarai.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%;">
+                <i data-lucide="message-circle"></i>
+                <span>Escribir por WhatsApp (+504 9838-0998)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3 class="serif-title" style="font-size:1.85rem;margin-bottom:0.4rem;">Envíanos una consulta</h3>
+            <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:1.5rem;">
+              Completa tus datos y te redirigiremos con tu consulta lista para atención inmediata.
+            </p>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Nombre completo *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="Ej. María Fernanda López" required />
+              </div>
+              <div class="form-group">
+                <label for="contactCity">Ciudad / Departamento en Honduras *</label>
+                <input type="text" id="contactCity" class="form-control" placeholder="Ej. Tegucigalpa, San Pedro Sula, La Ceiba..." required />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Mensaje o consulta *</label>
+                <textarea id="contactMessage" rows="4" class="form-control" placeholder="Cuéntanos qué camiseta te interesa o cómo podemos ayudarte..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                <i data-lucide="send" style="width:17px;height:17px;"></i>
+                <span>Enviar consulta por WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+      <div>
+        <strong style="font-family:var(--font-serif);font-size:1.5rem;color:#fff;">Elegance Sarai</strong>
+        <p style="margin-top:0.25rem;font-size:0.84rem;">Camisetas femeninas importadas de Estados Unidos • Honduras</p>
+      </div>
+      <div style="font-size:0.82rem;">
+        © 2026 Elegance Sarai. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       MODAL PREMIUM DE PRODUCTO
+       ======================================================================= -->
+  <div class="modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeModalBtn" aria-label="Cerrar ventana">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+      <div class="modal-body-grid" id="modalContent">
+        <!-- Se inyecta dinámicamente desde JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       DRAWER CARRITO DE COMPRAS + CHECKOUT WHATSAPP
+       ======================================================================= -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:0.6rem;">
+        <i data-lucide="shopping-bag" style="color:var(--brand-accent);"></i>
+        <strong style="font-size:1.1rem;">Tu Carrito</strong>
+      </div>
+      <button id="closeCartBtn" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);" aria-label="Cerrar carrito">
+        <i data-lucide="x" style="width:22px;height:22px;"></i>
+      </button>
+    </div>
+
+    <div class="cart-items-container" id="cartItemsContainer">
+      <!-- Render dinámico -->
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="summary-row">
+        <span>Artículos seleccionados</span>
+        <span id="cartTotalItems">0</span>
+      </div>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">L 0.00</span>
+      </div>
+      <div class="summary-total">
+        <span>Total Referencial</span>
+        <span id="cartTotal">L 0.00</span>
+      </div>
+
+      <button id="checkoutWhatsAppBtn" class="btn btn-whatsapp" style="width:100%;margin-bottom:0.6rem;">
+        <i data-lucide="message-circle" style="width:19px;height:19px;"></i>
+        <span>Finalizar pedido por WhatsApp</span>
+      </button>
+      <button id="clearCartBtn" style="width:100%;background:none;border:none;color:var(--text-muted);font-size:0.8rem;cursor:pointer;padding:0.35rem;">
+        Vaciar carrito
+      </button>
+    </div>
+  </aside>
+
+  <!-- =======================================================================
+       CHATBOT FLOTANTE INTELIGENTE
+       ======================================================================= -->
+  <button class="chatbot-launcher" id="chatbotLauncher" aria-label="Abrir asistente virtual">
+    <span class="bot-online-dot"></span>
+    <i data-lucide="sparkles" style="width:18px;height:18px;"></i>
+    <span style="font-weight:600;font-size:0.88rem;">Asistente Sarai AI</span>
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow" role="region" aria-label="Asistente Virtual Elegance Sarai">
+    <div class="chat-header">
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div class="chat-avatar">ES</div>
+        <div>
+          <strong style="display:block;font-size:0.94rem;">Asistente Elegance Sarai</strong>
+          <span style="font-size:0.74rem;opacity:0.88;">● En línea • Respuesta inmediata</span>
+        </div>
+      </div>
+      <button id="closeChatBtn" style="background:none;border:none;color:#fff;cursor:pointer;" aria-label="Minimizar chat">
+        <i data-lucide="chevron-down" style="width:21px;height:21px;"></i>
+      </button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg-bubble msg-bot">
+        ¡Hola! 👋 Soy la asistente virtual de <strong>Elegance Sarai</strong>. Estoy aquí para ayudarte con nuestro catálogo importado de EE.UU., horarios, envíos en Honduras o seguimiento de tu pedido. ¿Qué deseas consultar?
+      </div>
+    </div>
+
+    <div class="chat-quick-chips">
+      <button class="chip-btn" data-topic="productos">👕 Productos</button>
+      <button class="chip-btn" data-topic="entregas">🚚 Entregas</button>
+      <button class="chip-btn" data-topic="horarios">🕒 Horarios</button>
+      <button class="chip-btn" data-topic="promociones">✨ Promociones</button>
+      <button class="chip-btn" data-topic="seguimiento">📦 Seguimiento</button>
+      <button class="chip-btn" data-topic="contacto">📞 Contacto</button>
+    </div>
+
+    <form class="chat-input-bar" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Escribe tu pregunta aquí..." autocomplete="off" />
+      <button type="submit" class="btn btn-primary" style="padding:0.55rem 0.9rem;" aria-label="Enviar mensaje">
+        <i data-lucide="send" style="width:16px;height:16px;"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Notificación Toast -->
+  <div class="toast" id="toastNotification">
+    <i data-lucide="check-circle" style="width:18px;height:18px;color:#4ADE80;"></i>
+    <span id="toastMessage">Producto agregado al carrito</span>
+  </div>
+
+  <!-- =======================================================================
+       LÓGICA JAVASCRIPT (DATASET EXACTO, CARRITO LOCALSTORAGE, WHATSAPP & BOT)
+       ======================================================================= -->
+  <script>
+    /**
+     * 1. DATASET INICIAL EXTRAÍDO EXCLUSIVAMENTE DEL DOCUMENTO FUENTE
+     * - No se inventan marcas, precios ni IDs fuera del catálogo provisto.
+     * - Campos faltantes (código/ID, año, talla) se marcan explícitamente como "N/D".
+     */
+    const CATALOGO_PRODUCTS = [
+      {
+        index: 1,
+        codigo: "N/D",
+        nombre: "Camisetas femeninas",
+        marca: "Polo",
+        precio: 500.00,
+        anio: "N/D",
+        categoria: "Camisetas femeninas",
+        estado: "Disponible",
+        origen: "Importado EE.UU.",
+        foto: "https://lh3.googleusercontent.com/d/1aqYF2nai8cpcVN8zNAq0LXKiRbMj1AEh",
+        descripcion: "Camiseta femenina marca Polo importada desde Estados Unidos. Fotografía real correspondiente a la prenda disponible para cotización y entrega en Honduras."
+      },
+      {
+        index: 2,
+        codigo: "N/D",
+        nombre: "Camisetas femeninas",
+        marca: "Polo",
+        precio: 600.00,
+        anio: "N/D",
+        categoria: "Camisetas femeninas",
+        estado: "Disponible",
+        origen: "Importado EE.UU.",
+        foto: "https://lh3.googleusercontent.com/d/1pS94nhvp1Y8Dody4vK4FVBd3MEDGVj-s",
+        descripcion: "Camiseta femenina marca Polo importada desde Estados Unidos. Fotografía real correspondiente a la prenda disponible para cotización y entrega en Honduras."
+      },
+      {
+        index: 3,
+        codigo: "N/D",
+        nombre: "Camisetas femeninas",
+        marca: "Polo",
+        precio: 700.00,
+        anio: "N/D",
+        categoria: "Camisetas femeninas",
+        estado: "Disponible",
+        origen: "Importado EE.UU.",
+        foto: "https://lh3.googleusercontent.com/d/1LA-570psUE8CBDOBvhkZPEvxAueJPI8P",
+        descripcion: "Camiseta femenina marca Polo importada desde Estados Unidos. Fotografía real correspondiente a la prenda disponible para cotización y entrega en Honduras."
+      }
+    ];
+
+    const WHATSAPP_NUMBER = "50498380998";
+    const CART_STORAGE_KEY = "elegance_sarai_cart_v1";
+
+    // Estado de la aplicación
+    let cart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
+
+    // Formateador oficial a Lempiras con separadores de miles y dos decimales
+    function formatLempiras(amount) {
+      return "L " + Number(amount).toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+
+    // Mostrar notificación flotante
+    function showToast(msg) {
+      const toast = document.getElementById("toastNotification");
+      const toastMsg = document.getElementById("toastMessage");
+      toastMsg.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2600);
+    }
+
+    /* =========================================================================
+       2. RENDERIZADO DE CATÁLOGO Y FILTROS
+       ========================================================================= */
+    function initFilters() {
+      const brandFilter = document.getElementById("brandFilter");
+      const yearFilter = document.getElementById("yearFilter");
+
+      const uniqueBrands = [...new Set(CATALOGO_PRODUCTS.map(p => p.marca))];
+      uniqueBrands.forEach(brand => {
+        const opt = document.createElement("option");
+        opt.value = brand;
+        opt.textContent = `Marca: ${brand}`;
+        brandFilter.appendChild(opt);
+      });
+
+      const uniqueYears = [...new Set(CATALOGO_PRODUCTS.map(p => p.anio))];
+      yearFilter.innerHTML = `<option value="all">Año: Todos</option>`;
+      uniqueYears.forEach(yr => {
+        const opt = document.createElement("option");
+        opt.value = yr;
+        opt.textContent = `Año: ${yr}`;
+        yearFilter.appendChild(opt);
+      });
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById("productsGrid");
+      const searchVal = document.getElementById("searchInput").value.trim().toLowerCase();
+      const brandVal = document.getElementById("brandFilter").value;
+      const yearVal = document.getElementById("yearFilter").value;
+      const priceVal = document.getElementById("priceFilter").value;
+
+      const filtered = CATALOGO_PRODUCTS.filter(item => {
+        const matchesSearch =
+          item.nombre.toLowerCase().includes(searchVal) ||
+          item.marca.toLowerCase().includes(searchVal) ||
+          item.codigo.toLowerCase().includes(searchVal) ||
+          `#${item.index}`.includes(searchVal);
+
+        const matchesBrand = brandVal === "all" || item.marca === brandVal;
+        const matchesYear = yearVal === "all" || item.anio === yearVal;
+
+        let matchesPrice = true;
+        if (priceVal !== "all") {
+          const [min, max] = priceVal.split("-").map(Number);
+          matchesPrice = item.precio >= min && item.precio <= max;
+        }
+
+        return matchesSearch && matchesBrand && matchesYear && matchesPrice;
+      });
+
+      document.getElementById("resultsCounter").textContent =
+        `Mostrando ${filtered.length} de ${CATALOGO_PRODUCTS.length} prendas disponibles`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column:1/-1;text-align:center;padding:3.5rem 1rem;background:var(--surface);border-radius:var(--radius-md);border:1px solid var(--border-light);">
+            <p style="font-size:1.05rem;font-weight:600;margin-bottom:0.5rem;">No encontramos camisetas con esos filtros</p>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem;">Intenta restablecer los filtros para ver todo el catálogo importado.</p>
+            <button class="btn btn-outline" onclick="resetCatalogFilters()">Ver todas las camisetas</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(product => `
+        <article class="product-card">
+          <div class="product-media" onclick="openProductModal(${product.index})">
+            <img src="${product.foto}" alt="${product.nombre} marca ${product.marca} - Opción ${product.index}" loading="lazy" />
+            <div class="product-badges">
+              <span class="badge badge-available">● ${product.estado}</span>
+              <span class="badge badge-imported">${product.origen}</span>
+            </div>
+            <span class="photo-caption-tag">
+              <i data-lucide="camera" style="width:12px;height:12px;"></i>
+              Foto real • Prenda #${product.index}
+            </span>
+            <div class="quick-view-overlay">
+              <span class="quick-view-pill">
+                <i data-lucide="eye" style="width:15px;height:15px;"></i>
+                Ver detalle ampliado
+              </span>
+            </div>
+          </div>
+
+          <div class="product-body">
+            <div class="product-meta-top">
+              <span>Marca: ${product.marca}</span>
+              <span>Código/ID: ${product.codigo}</span>
+            </div>
+            <h3 class="product-title" onclick="openProductModal(${product.index})">
+              ${product.nombre} (Modelo #${product.index})
+            </h3>
+            <p class="product-desc">${product.descripcion}</p>
+            
+            <div class="product-specs-mini">
+              <span><strong>Año:</strong> ${product.anio}</span>
+              <span>•</span>
+              <span><strong>Categoría:</strong> ${product.categoria}</span>
+            </div>
+
+            <div class="product-price-row">
+              <div class="product-price">${formatLempiras(product.precio)} <small>HN</small></div>
+            </div>
+
+            <div class="product-actions">
+              <button class="btn btn-primary btn-add-cart" onclick="addToCart(${product.index})">
+                <i data-lucide="shopping-bag" style="width:16px;height:16px;"></i>
+                <span>Agregar al carrito</span>
+              </button>
+              <button class="btn-icon-square" onclick="openProductModal(${product.index})" title="Ver detalles" aria-label="Ver detalles de ${product.nombre}">
+                <i data-lucide="maximize-2" style="width:17px;height:17px;"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join("");
+
+      lucide.createIcons();
+    }
+
+    function resetCatalogFilters() {
+      document.getElementById("searchInput").value = "";
+      document.getElementById("brandFilter").value = "all";
+      document.getElementById("yearFilter").value = "all";
+      document.getElementById("priceFilter").value = "all";
+      renderCatalog();
+    }
+
+    /* =========================================================================
+       3. MODAL DE PRODUCTO PREMIUM
+       ========================================================================= */
+    function openProductModal(productIndex) {
+      const product = CATALOGO_PRODUCTS.find(p => p.index === productIndex);
+      if (!product) return;
+
+      const modal = document.getElementById("productModal");
+      const content = document.getElementById("modalContent");
+
+      const singleWaText = encodeURIComponent(
+        `Hola 😊 Me interesa cotizar y conocer disponibilidad de la camiseta femenina marca ${product.marca} (${formatLempiras(product.precio)}, Código/ID: ${product.codigo}, Ref. catálogo #${product.index}) que vi en la web de Elegance Sarai. ¿Me confirmas disponibilidad y próximos pasos?`
+      );
+
+      content.innerHTML = `
+        <div class="modal-image-col">
+          <img src="${product.foto}" alt="${product.nombre} marca ${product.marca}" />
+          <span class="photo-caption-tag" style="bottom:1rem;left:1rem;">
+            <i data-lucide="check-circle" style="width:13px;height:13px;color:var(--brand-accent);"></i>
+            Fotografía real de la prenda en venta
+          </span>
+        </div>
+        <div class="modal-info-col">
+          <div>
+            <div style="display:flex;gap:0.5rem;margin-bottom:0.75rem;">
+              <span class="badge badge-available">● ${product.estado}</span>
+              <span class="badge badge-imported">${product.origen}</span>
+            </div>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--brand-accent);text-transform:uppercase;letter-spacing:0.08em;">
+              Marca ${product.marca}
+            </span>
+            <h3 id="modalTitle" class="serif-title" style="font-size:2rem;margin:0.2rem 0 0.6rem;">
+              ${product.nombre} #${product.index}
+            </h3>
+            <div style="font-size:1.65rem;font-weight:700;color:var(--brand-primary);margin-bottom:0.9rem;">
+              ${formatLempiras(product.precio)}
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;">
+              ${product.descripcion}
+            </p>
+
+            <table class="modal-specs-table">
+              <tr>
+                <td>Categoría</td>
+                <td>${product.categoria}</td>
+              </tr>
+              <tr>
+                <td>Marca</td>
+                <td>${product.marca}</td>
+              </tr>
+              <tr>
+                <td>Código / ID</td>
+                <td>${product.codigo}</td>
+              </tr>
+              <tr>
+                <td>Año</td>
+                <td>${product.anio}</td>
+              </tr>
+              <tr>
+                <td>Disponibilidad</td>
+                <td style="color:#166534;">${product.estado} (${product.origen})</td>
+              </tr>
+            </table>
+          </div>
+
+          <div style="display:grid;gap:0.65rem;margin-top:0.5rem;">
+            <button class="btn btn-primary" onclick="addToCart(${product.index}); closeProductModal();">
+              <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+              <span>Agregar al carrito de cotización</span>
+            </button>
+            <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${singleWaText}" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+              <span>Consultar esta prenda por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      `;
+
+      modal.classList.add("open");
+      lucide.createIcons();
+    }
+
+    function closeProductModal() {
+      document.getElementById("productModal").classList.remove("open");
+    }
+
+    /* =========================================================================
+       4. CARRITO DE COMPRAS PERSISTENTE (LOCALSTORAGE) + WHATSAPP CHECKOUT
+       ========================================================================= */
+    function saveCart() {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function addToCart(productIndex) {
+      const product = CATALOGO_PRODUCTS.find(p => p.index === productIndex);
+      if (!product) return;
+
+      const existing = cart.find(item => item.index === productIndex);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+
+      saveCart();
+      const badge = document.getElementById("cartCountBadge");
+      badge.classList.add("bump");
+      setTimeout(() => badge.classList.remove("bump"), 250);
+      showToast(`Agregado: ${product.nombre} (${product.marca})`);
+    }
+
+    function updateItemQty(productIndex, delta) {
+      const item = cart.find(i => i.index === productIndex);
+      if (!item) return;
+
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.index !== productIndex);
+      }
+      saveCart();
+    }
+
+    function removeFromCart(productIndex) {
+      cart = cart.filter(i => i.index !== productIndex);
+      saveCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      saveCart();
+      showToast("Carrito vaciado");
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById("cartItemsContainer");
+      const footer = document.getElementById("cartFooter");
+      const badge = document.getElementById("cartCountBadge");
+
+      const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+      const totalAmount = cart.reduce((acc, item) => acc + (item.precio * item.qty), 0);
+
+      badge.textContent = totalQty;
+      document.getElementById("cartTotalItems").textContent = `${totalQty} ${totalQty === 1 ? "prenda" : "prendas"}`;
+      document.getElementById("cartSubtotal").textContent = formatLempiras(totalAmount);
+      document.getElementById("cartTotal").textContent = formatLempiras(totalAmount);
+
+      if (cart.length === 0) {
+        footer.style.display = "none";
+        container.innerHTML = `
+          <div style="text-align:center;padding:3.5rem 1rem;">
+            <div style="width:58px;height:58px;border-radius:50%;background:var(--bg-secondary);display:grid;place-items:center;margin:0 auto 1rem;color:var(--text-muted);">
+              <i data-lucide="shopping-bag" style="width:26px;height:26px;"></i>
+            </div>
+            <strong style="display:block;font-size:1.05rem;margin-bottom:0.35rem;">Tu carrito está vacío</strong>
+            <p style="font-size:0.86rem;color:var(--text-secondary);margin-bottom:1.5rem;">
+              Explora nuestras camisetas femeninas importadas y selecciona tus favoritas para cotizar por WhatsApp.
+            </p>
+            <button class="btn btn-primary" onclick="closeCartDrawer(); document.getElementById('catalogo').scrollIntoView({behavior:'smooth'});">
+              Explorar catálogo
+            </button>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      footer.style.display = "block";
+      container.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.foto}" alt="${item.nombre}" />
+          <div class="cart-item-details">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem;">
+              <strong style="font-size:0.92rem;color:var(--brand-primary);">${item.nombre} #${item.index}</strong>
+              <button onclick="removeFromCart(${item.index})" style="background:none;border:none;color:var(--text-muted);cursor:pointer;" title="Eliminar" aria-label="Eliminar artículo">
+                <i data-lucide="trash-2" style="width:16px;height:16px;"></i>
+              </button>
+            </div>
+            <div style="font-size:0.78rem;color:var(--text-secondary);">
+              Marca: <strong>${item.marca}</strong> • Código/ID: ${item.codigo}
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.35rem;">
+              <div class="cart-qty-controls">
+                <button class="qty-btn" onclick="updateItemQty(${item.index}, -1)" aria-label="Disminuir cantidad">−</button>
+                <span class="qty-val">${item.qty}</span>
+                <button class="qty-btn" onclick="updateItemQty(${item.index}, 1)" aria-label="Aumentar cantidad">+</button>
+              </div>
+              <strong style="font-size:0.94rem;color:var(--brand-primary);">${formatLempiras(item.precio * item.qty)}</strong>
+            </div>
+          </div>
+        </div>
+      `).join("");
+
+      lucide.createIcons();
+    }
+
+    function openCartDrawer() {
+      document.getElementById("cartOverlay").classList.add("open");
+      document.getElementById("cartDrawer").classList.add("open");
+    }
+
+    function closeCartDrawer() {
+      document.getElementById("cartOverlay").classList.remove("open");
+      document.getElementById("cartDrawer").classList.remove("open");
+    }
+
+    /**
+     * FLUJO DE COMPRA SIN PASARELA -> WHATSAPP BUSINESS (+50498380998)
+     * Construye mensaje amigable, comercial, con detalle completo y URL-encoded.
+     */
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) return;
+
+      const totalAmount = cart.reduce((acc, item) => acc + (item.precio * item.qty), 0);
+
+      const itemsLines = cart.map((item, idx) => {
+        const lineSubtotal = formatLempiras(item.precio * item.qty);
+        return `${idx + 1}. ${item.nombre} (Catálogo #${item.index}) | Marca: ${item.marca} | Código/ID: ${item.codigo} | Cant: ${item.qty} | Precio unit.: ${formatLempiras(item.precio)} | Subtotal: ${lineSubtotal}`;
+      }).join("\n");
+
+      const message = 
+`Hola 😊 Me interesa cotizar y conocer disponibilidad de camiseta(s) femenina(s) que vi en su web Elegance Sarai. Quisiera solicitar reserva/cotización de la siguiente selección:
+
+${itemsLines}
+
+Total referencial: ${formatLempiras(totalAmount)}
+
+¿Me confirmas disponibilidad y próximos pasos? Quedo atenta para coordinar entrega, envío o una breve llamada si es necesario. ¡Muchas gracias!`;
+
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    }
+
+    /* =========================================================================
+       5. CHATBOT FLOTANTE INTELIGENTE
+       ========================================================================= */
+    const BOT_KNOWLEDGE = {
+      productos: "Contamos con camisetas femeninas importadas directamente desde Estados Unidos de la marca **Polo** (modelos desde L 500.00 hasta L 700.00). Todas incluyen fotografía real en nuestro catálogo.",
+      entregas: "Realizamos entregas locales coordinadas y envíos seguros a todo Honduras mediante paquetería confiable. Al finalizar tu pedido por WhatsApp te indicamos el costo y tiempo estimado según tu ciudad.",
+      horarios: "Nuestro horario de atención personalizada es de **Lunes a Sábado de 8:30 AM a 6:30 PM**. ¡La tienda web está abierta 24/7 para que armes tu carrito cuando gustes!",
+      promociones: "Constantemente recibimos nuevos lotes importados de EE.UU. con precios especiales en Lempiras. Si llevas varias prendas en tu carrito, consúltanos por WhatsApp por tarifas preferenciales de envío.",
+      seguimiento: "Para dar seguimiento a un pedido ya coordinado, escríbenos directamente a nuestro WhatsApp Business (+504 9838-0998) con tu nombre completo y ciudad para compartirte el estado de tu guía.",
+      contacto: "Puedes comunicarte directamente con nuestro equipo al **+504 9838-0998** vía WhatsApp o llamada, o usar el botón 'Finalizar pedido por WhatsApp' desde tu carrito."
+    };
+
+    function appendChatMessage(text, sender = "bot") {
+      const messagesBox = document.getElementById("chatMessages");
+      const bubble = document.createElement("div");
+      bubble.className = `msg-bubble ${sender === "bot" ? "msg-bot" : "msg-user"}`;
+      // Permitir negritas simples **texto**
+      bubble.innerHTML = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+      messagesBox.appendChild(bubble);
+      messagesBox.scrollTop = messagesBox.scrollHeight;
+    }
+
+    function getBotReply(userText) {
+      const q = userText.toLowerCase();
+      if (q.includes("horario") || q.includes("hora") || q.includes("abierto")) return BOT_KNOWLEDGE.horarios;
+      if (q.includes("promo") || q.includes("descuento") || q.includes("oferta")) return BOT_KNOWLEDGE.promociones;
+      if (q.includes("entrega") || q.includes("envio") || q.includes("envío") || q.includes("ciudad") || q.includes("domicilio")) return BOT_KNOWLEDGE.entregas;
+      if (q.includes("producto") || q.includes("camisa") || q.includes("camiseta") || q.includes("polo") || q.includes("precio") || q.includes("catalogo")) return BOT_KNOWLEDGE.productos;
+      if (q.includes("seguimiento") || q.includes("pedido") || q.includes("rastreo") || q.includes("guia")) return BOT_KNOWLEDGE.seguimiento;
+      if (q.includes("contacto") || q.includes("telefono") || q.includes("whatsapp") || q.includes("numero")) return BOT_KNOWLEDGE.contacto;
+      
+      return "Gracias por escribirnos 😊 Puedo ayudarte con información sobre **productos**, **precios**, **entregas en Honduras**, **horarios**, **promociones** o **seguimiento de pedidos**. También puedes escribirnos directo al WhatsApp +504 9838-0998.";
+    }
+
+    function handleBotQuery(text, labelOverride = null) {
+      appendChatMessage(labelOverride || text, "user");
+      setTimeout(() => {
+        appendChatMessage(getBotReply(text), "bot");
+      }, 380);
+    }
+
+    /* =========================================================================
+       6. INICIALIZACIÓN Y EVENT LISTENERS
+       ========================================================================= */
+    document.addEventListener("DOMContentLoaded", () => {
+      initFilters();
+      renderCatalog();
+      updateCartUI();
+      lucide.createIcons();
+
+      // Filtros en tiempo real
+      document.getElementById("searchInput").addEventListener("input", renderCatalog);
+      document.getElementById("brandFilter").addEventListener("change", renderCatalog);
+      document.getElementById("yearFilter").addEventListener("change", renderCatalog);
+      document.getElementById("priceFilter").addEventListener("change", renderCatalog);
+      document.getElementById("resetFiltersBtn").addEventListener("click", resetCatalogFilters);
+
+      // Menú móvil
+      document.getElementById("mobileMenuBtn").addEventListener("click", () => {
+        document.getElementById("navLinks").classList.toggle("active");
+      });
+
+      // Modal producto
+      document.getElementById("closeModalBtn").addEventListener("click", closeProductModal);
+      document.getElementById("productModal").addEventListener("click", (e) => {
+        if (e.target.id === "productModal") closeProductModal();
+      });
+
+      // Carrito Drawer
+      document.getElementById("openCartBtn").addEventListener("click", openCartDrawer);
+      document.getElementById("closeCartBtn").addEventListener("click", closeCartDrawer);
+      document.getElementById("cartOverlay").addEventListener("click", closeCartDrawer);
+      document.getElementById("clearCartBtn").addEventListener("click", clearCart);
+      document.getElementById("checkoutWhatsAppBtn").addEventListener("click", checkoutViaWhatsApp);
+
+      // Formulario de contacto -> WhatsApp
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("contactName").value.trim();
+        const city = document.getElementById("contactCity").value.trim();
+        const msg = document.getElementById("contactMessage").value.trim();
+
+        const fullText = `Hola 😊 Soy *${name}* de *${city}*. Les escribo desde la web de Elegance Sarai:\n\n"${msg}"\n\n¿Me podrían brindar información? ¡Muchas gracias!`;
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullText)}`, "_blank", "noopener");
+      });
+
+      // Chatbot flotante
+      const chatWindow = document.getElementById("chatbotWindow");
+      document.getElementById("chatbotLauncher").addEventListener("click", () => {
+        chatWindow.classList.toggle("open");
+      });
+      document.getElementById("closeChatBtn").addEventListener("click", () => {
+        chatWindow.classList.remove("open");
+      });
+
+      document.querySelectorAll(".chip-btn").forEach(chip => {
+        chip.addEventListener("click", () => {
+          const topic = chip.getAttribute("data-topic");
+          handleBotQuery(topic, chip.textContent);
+        });
+      });
+
+      document.getElementById("chatForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const input = document.getElementById("chatInput");
+        const val = input.value.trim();
+        if (!val) return;
+        input.value = "";
+        handleBotQuery(val);
+      });
+
+      // Cierre con tecla Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeProductModal();
+          closeCartDrawer();
+          chatWindow.classList.remove("open");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
